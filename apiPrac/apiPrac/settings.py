@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'httpres',
     'rest_framework',
+    'serializer',
 ]
 
 MIDDLEWARE = [
