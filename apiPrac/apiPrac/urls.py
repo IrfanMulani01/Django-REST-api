@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('http/', include('httpres.urls')),
-    path('', include('serializer.urls')),
+    path('serializer/', include('serializer.urls')),
+    path('', include('modelSerializer.urls')),
 ]
