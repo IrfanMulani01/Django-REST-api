@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'httpres',
     'rest_framework',
     'serializer',
+    'modelSerializer',
 ]
 
 MIDDLEWARE = [
