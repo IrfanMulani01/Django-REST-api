@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('http/', include('httpres.urls')),
     path('serializer/', include('serializer.urls')),
-    path('', include('modelSerializer.urls')),
+    path('modelSerialier', include('modelSerializer.urls')),
+    path('', include('APIView.urls')),
 ]
