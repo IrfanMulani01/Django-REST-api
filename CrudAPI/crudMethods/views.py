@@ -45,7 +45,7 @@ class PutStud(APIView):
 
 
 class PatchStud(APIView):
-    
+
     def patch(self, request, pk):
         stud = get_object_or_404(Student, id=pk)
         serializer = StudentSerializer(stud, data=request.data, partial=True)
@@ -55,9 +55,9 @@ class PatchStud(APIView):
         return Response(serializer.errors)
 
     
-# class DeleteStud(APIView):
-#     def delete(self, request, pk):
-#         stud = get_object_or_404(Student, id=pk)
-#         stud.delete()
-#         return Response({"Message": "Record delete successfully"})
+class DeleteStud(APIView):
+    def delete(self, request, pk):
+        stud = get_object_or_404(Student, id=pk)
+        stud.delete()
+        return Response({"Message": "Record delete successfully"})
     
