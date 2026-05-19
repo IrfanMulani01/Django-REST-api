@@ -45,6 +45,7 @@ class PutStud(APIView):
 
 
 class PatchStud(APIView):
+    
     def patch(self, request, pk):
         stud = get_object_or_404(Student, id=pk)
         serializer = StudentSerializer(stud, data=request.data, partial=True)
