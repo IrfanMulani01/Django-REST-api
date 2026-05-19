@@ -33,25 +33,25 @@ class ListStud(APIView):
         return Response(serializer.data)
 
 
-# class PutStud(APIView):
-#     def put(self, request, pk):
-#         stud = get_object_or_404(Student, id=pk)
-#         serializer = StudentSerializer(stud, data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response({"message": "Student Updated",
-#                 "data": serializer.data})
-#         return Response(serializer.errors)
+class PutStud(APIView):
+    def put(self, request, pk):
+        stud = get_object_or_404(Student, id=pk)
+        serializer = StudentSerializer(stud, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Student Updated",
+                "data": serializer.data})
+        return Response(serializer.errors)
 
 
-# class PatchStud(APIView):
-#     def patch(self, request, pk):
-#         stud = get_object_or_404(Student, id=pk)
-#         serializer = StudentSerializer(stud, data=request.data, partial=True)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return  Response({"Message": "update succesfully", "data":serializer.data})
-#         return Response(serializer.errors)
+class PatchStud(APIView):
+    def patch(self, request, pk):
+        stud = get_object_or_404(Student, id=pk)
+        serializer = StudentSerializer(stud, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return  Response({"Message": "update succesfully", "data":serializer.data})
+        return Response(serializer.errors)
 
     
 # class DeleteStud(APIView):
